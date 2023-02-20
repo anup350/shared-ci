@@ -4,9 +4,11 @@ on:
 jobs:
   print_red:
     name: Print from red
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest
     environment: red
     uses: anup350/shared-red/.github/workflows/dev.yml@main
+    with:
+      environment: red
     # steps:
     #   - name: Display from called repo
     #     run: echo "Calling red repo"
@@ -15,6 +17,8 @@ jobs:
     runs-on: ubuntu:latest
     environment: blue
     uses: anup350/shared-blue/.github/workflows/dev.yml@main
+    with:
+      environment: blue
     # steps:
     #   - name: Display from called repo
     #     run: echo "Calling blue repo"
