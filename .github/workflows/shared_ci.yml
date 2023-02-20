@@ -8,12 +8,16 @@ jobs:
     uses: anup350/shared-red/.github/workflows/dev.yml@main
     with:
       environment: red
+    secrets:
+      API_TOKEN_GITHUB: ${{ inputs.API_TOKEN_GITHUB }}
   print_blue:
     name: Print from blue
     runs-on: ubuntu-latest
     uses: anup350/shared-blue/.github/workflows/dev.yml@main
     with:
       environment: blue
+    secrets:
+      API_TOKEN_GITHUB: ${{ inputs.API_TOKEN_GITHUB }}
   # deploy_blue:
   #   name: Deploy to blue
   #   environment: blue
