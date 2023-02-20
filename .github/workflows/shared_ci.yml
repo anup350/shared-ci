@@ -1,0 +1,15 @@
+name: Dispatch Pipeline
+on:
+  workflow_dispatch:
+jobs:
+  deploy_blue:
+    name: Deploy to blue
+    environment: blue
+    uses: anup350/shared-blue/.github/workflows/dev.yml@main
+      
+  deploy_red:
+    name: Deploy to red
+    # needs: deploy_blue
+    environment: red
+    uses: anup350/shared-red/.github/workflows/dev.yml@main
+
