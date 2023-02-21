@@ -6,7 +6,7 @@ on:
       - blue
 jobs:
   shared_action_definitions:
-    if: ${{ github.event }} == "red"
+    # if: ${{ github.event }} == "red"
     name: Shared action A
     runs-on: ubuntu-latest
     steps:
