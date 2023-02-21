@@ -1,0 +1,10 @@
+name: Shared actions
+on:
+  workflow_call:
+jobs:
+  shared_action_definitions:
+    name: Shared action A
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display shared action content
+        run: echo "Printing in shared-ci repo using shared_actions.yml workflow."
