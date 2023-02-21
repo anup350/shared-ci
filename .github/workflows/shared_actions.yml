@@ -1,6 +1,9 @@
 name: Shared actions
 on:
   repository_dispatch:
+    types:
+      - red
+      - blue
 jobs:
   shared_action_definitions:
     name: Shared action A
