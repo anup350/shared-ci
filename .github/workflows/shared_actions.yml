@@ -1,6 +1,6 @@
 name: Shared actions
 on:
-  workflow_dispatch:
+  repository_dispatch:
 jobs:
   shared_action_definitions:
     name: Shared action A
