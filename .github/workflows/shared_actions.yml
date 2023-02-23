@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Display shared action content
-        run: echo "Event name = ${{ github.event_name }}"
-      - name: Check out my other private repo
-        uses: actions/checkout@master
-        with:
-          repository: anup350/shared-${{ github.event_name }}
+        run: echo "Event name = ${{ github.event.id }}"
+      # - name: Check out my other private repo
+      #   uses: actions/checkout@master
+      #   with:
+      #     repository: anup350/shared-${{ github.event_name }}
           # token: ${{ secrets.my_pat }}
       - name: Display current folder content
         run: ls -latr
